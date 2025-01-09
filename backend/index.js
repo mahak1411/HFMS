@@ -41,10 +41,10 @@ app.use('/api/delivery', deliveryRoutes); // Delivery task routes
 // Error handling middleware
 app.use(errorHandler);
 
-// Define a basic route for testing
-app.get('/', (req, res) => {
-  res.send('Welcome to the Hospital Food Manager API!');
-});
+// // Define a basic route for testing
+// app.get('/', (req, res) => {
+//   res.send('Welcome to the Hospital Food Manager API!');
+// });
 
 
 app.use(express.static(path.join(_dirname, '/frontend/dist')));

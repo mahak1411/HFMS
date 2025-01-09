@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 
 // Import pages/components for different routes
 import Home from "./pages/Home";
-
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import AdminPage from "./pages/RolePages/AdminPage";

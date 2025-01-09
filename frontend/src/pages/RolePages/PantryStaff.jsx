@@ -21,7 +21,7 @@ const PantryStaff = () => {
   const fetchPantryTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/pantry/pantry-tasks",
+        "https://hfms-5ol5.onrender.com/api/pantry/pantry-tasks",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,7 +41,7 @@ const PantryStaff = () => {
   const fetchPatients = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/patient/patients",
+        "https://hfms-5ol5.onrender.com/api/patient/patients",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const PantryStaff = () => {
     const newTask = { meal, patientId, pantryStaffId, taskDescription, status };
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/pantry/pantry-tasks",
+        "https://hfms-5ol5.onrender.com/api/pantry/pantry-tasks",
         newTask,
         {
           headers: {
@@ -107,7 +107,7 @@ const PantryStaff = () => {
     };
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/pantry/pantry-tasks/${taskIdToUpdate}`,
+        `https://hfms-5ol5.onrender.com/api/pantry/pantry-tasks/${taskIdToUpdate}`,
         updatedTask,
         {
           headers: {
@@ -133,7 +133,7 @@ const PantryStaff = () => {
   const deleteTask = async (taskId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/pantry/pantry-tasks/${taskId}`,
+        `https://hfms-5ol5.onrender.com/api/pantry/pantry-tasks/${taskId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

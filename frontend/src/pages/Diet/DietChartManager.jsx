@@ -28,7 +28,7 @@ const DietChartManager = () => {
   const fetchDietCharts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/diets/diet-charts",
+        "https://hfms-5ol5.onrender.com/api/diets/diet-charts",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ const DietChartManager = () => {
     try {
       const token = localStorage.getItem("token"); // Get token from localStorage
       const response = await axios.get(
-        "http://localhost:5000/api/patient/patients",
+        "https://hfms-5ol5.onrender.com/api/patient/patients",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -64,7 +64,7 @@ const DietChartManager = () => {
     const newDietChart = { patientId, ...dietChart };
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/diets/diet-charts",
+        "https://hfms-5ol5.onrender.com/api/diets/diet-charts",
         newDietChart,
         {
           headers: {
@@ -82,7 +82,7 @@ const DietChartManager = () => {
   const deleteDietChart = async (dietChartId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/diets/diet-charts/${dietChartId}`,
+        `https://hfms-5ol5.onrender.com/api/diets/diet-charts/${dietChartId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

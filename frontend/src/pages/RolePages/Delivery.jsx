@@ -25,7 +25,7 @@ const Delivery = () => {
 
         if (isAuthenticated) {
             // Fetch deliveries
-            axios.get('http://localhost:5000/api/delivery/deliveries', {
+            axios.get('https://hfms-5ol5.onrender.com/api/delivery/deliveries', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             })
                 .then(response => {
@@ -34,7 +34,7 @@ const Delivery = () => {
                 .catch(error => console.error('Error fetching deliveries:', error));
 
             // Fetch diet charts
-            axios.get('http://localhost:5000/api/diets/diet-charts', {
+            axios.get('https://hfms-5ol5.onrender.com/api/diets/diet-charts', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             })
                 .then(response => {
@@ -43,7 +43,7 @@ const Delivery = () => {
                 .catch(error => console.error('Error fetching diet charts:', error));
 
             // Fetch delivery staff
-            axios.get('http://localhost:5000/api/delivery/users?role=deliveryStaff', {
+            axios.get('https://hfms-5ol5.onrender.com/api/delivery/users?role=deliveryStaff', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             })
                 .then(response => {
@@ -52,7 +52,7 @@ const Delivery = () => {
                 .catch(error => console.error('Error fetching delivery staff:', error));
 
             // Fetch patients
-            axios.get('http://localhost:5000/api/patient/patients', {
+            axios.get('https://hfms-5ol5.onrender.com/api/patient/patients', {
                 headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
             })
                 .then(response => {
@@ -72,7 +72,7 @@ const Delivery = () => {
             patientId: selectedPatientId, // Ensure patientId is included
         };
 
-        axios.post('http://localhost:5000/api/delivery/deliveries', deliveryData, {
+        axios.post('https://hfms-5ol5.onrender.com/api/delivery/deliveries', deliveryData, {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         })
             .then(response => {
@@ -91,7 +91,7 @@ const Delivery = () => {
             deliveryNotes,
         };
 
-        axios.put(`http://localhost:5000/api/delivery/deliveries/${deliveryId}`, updateData, {
+        axios.put(`https://hfms-5ol5.onrender.com/api/delivery/deliveries/${deliveryId}`, updateData, {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
         })
             .then(response => {

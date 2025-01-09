@@ -23,7 +23,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const response = await axios.post('https://hfms-5ol5.onrender.com/api/auth/login', { email, password });
             const token = response.data.token;
 
             localStorage.setItem('token', token);

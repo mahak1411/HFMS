@@ -24,7 +24,7 @@ const Patient = () => {
         const fetchPatients = async () => {
             try {
                 const token = localStorage.getItem('token'); // Get token from localStorage
-                const response = await axios.get('http://localhost:5000/api/patient/patients', {
+                const response = await axios.get('https://hfms-5ol5.onrender.com/api/patient/patients', {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -57,7 +57,7 @@ const Patient = () => {
         try {
             const token = localStorage.getItem('token'); // Get token from localStorage
 
-            const response = await axios.post('http://localhost:5000/api/patient/patients', newPatient, {
+            const response = await axios.post('https://hfms-5ol5.onrender.com/api/patient/patients', newPatient, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

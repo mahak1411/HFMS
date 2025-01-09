@@ -23,7 +23,7 @@ function Register() {
 
         try {
             // Send POST request to backend register endpoint
-            const response = await axios.post('http://localhost:5000/api/auth/register', { 
+            const response = await axios.post('https://hfms-5ol5.onrender.com/api/auth/register', { 
                 name, 
                 email, 
                 password, 

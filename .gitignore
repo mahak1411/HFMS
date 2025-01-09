@@ -1,0 +1,27 @@
+# Frontend Ignored Files
+/frontend/node_modules/
+/frontend/build/
+/frontend/dist/
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.env
+/frontend/.DS_Store
+
+# Backend Ignored Files
+/backend/node_modules/
+/backend/logs/
+/backend/*.log
+/backend/.env
+/backend/*.sqlite
+/backend/*.sqlite3
+/backend/dist/
+/backend/build/
+/backend/.DS_Store
+/backend/Thumbs.db
+
+# Common Ignored Files
+.DS_Store
+Thumbs.db
+.env
+node_modules
